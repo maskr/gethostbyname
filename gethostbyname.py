@@ -12,12 +12,10 @@ class Manejador:
 	def on_boton_salir_clicked(self, *args):
 		Gtk.main_quit(*args)
 def obtener_direccion(nombre_maquina):
-	direccion = socket.gethostbyname(nombre_maquina)
-	return direccion
+	return socket.gethostbyname(nombre_maquina)
 def obtener_nombre():
 	nombre = constructor.get_object("entrada_nombre")
-	nombre = nombre.get_text()
-	return nombre
+	return nombre.get_text()
 def insertar_direccion(direccion):
 	texto = constructor.get_object("entrada_ip")
 	texto = texto.set_text(direccion)
